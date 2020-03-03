@@ -35,66 +35,366 @@
     "programming": ["CS440", "CS441", "CS442"],
     "software": ["SE311", "SE220", "SE410"]
   },
-  "pre-reqs": {
-    "CI101": [],
-    "CI102": [],
-    "CI103": ["CI102"],
-    "CI491": ["CS451/INFO324/INFO442/SE310"],
-    "CI492": ["CI491"],
-    "CI493": ["CI492"],
-    "CS140": [],
-    "CS143": [],
-    "CS150": [],
-    "CS161": [],
-    "CS164": [],
-    "CS171": [],
-    "CS172": ["CS171/CS132/CS175"],
-    "CS175": [],
-    "CS176": ["CS171/CS175"],
-    "CS190": [],
-    "CS260": ["CS265"],
-    "CS265": ["CS172/CS176/CS133/SE103/ECEC301/ECEC201"],
-    "CS270": ["CS172/CS176/CS265/SE103/ECEC301/ECEC201"],
-    "CS277": ["CS260"],
-    "CS281": ["CS270/ECE200", "CS172/CS176/SE103/ECEC301/ECEC201"],
-    "CS283": ["CS265"],
-    "CS300": ["CS260", "CS270", "MATH200", "MATH201"],
-    "CS303": ["CS260", "MATH221/MATH222", "MATH201/ENGR231"],
-    "CS314": [],
-    "CS338": ["CS350/SE310/CS275"],
-    "CS341": [],
-    "CS342": ["CS345", "GMAP345"],
-    "CS345": ["DIGM260/GMAP260", "CS265/DIGM141"],
-    "CS352": ["CS281/ECEC355"],
-    "CS360": ["CS260", "CS265", "CS270"],
-    "CS361": ["CS260", "CS281/ECEC355"],
-    "CS365": ["CS260", "CS265"],
-    "CS370": ["CS283/ECEC353"],
-    "CS375": ["CS265/CS164&CI103", "CS172/CS176"],
-    "CS377": ["CS283/ECEC353"],
-    "CS380": ["CS260", "CS270"],
-    "CS383": ["CS260", "MATH201/ENGR231", "MATH221/MATH222", "MATH311/MATH410/ECE361"],
-    "CS385": ["CS260", "CS380"],
-    "CS387": ["CS260", "CS380"],
-    "CS430": ["CS260", "MATH201/MATH261/ENGR231"],
-    "CS431": ["CS430/CS432"],
-    "CS432": ["CS260", "MATH201/MATH261/ENGR231"],
-    "CS435": ["CS260", "MATH201/MATH261/ENGR231"],
-    "CS440": ["CS260", "MATH201/MATH261/ENGR231"],
-    "CS441": ["CS270", "CS283/ECEC353", "CS360", "CS440"],
-    "CS442": ["CS441"],
-    "CS445": ["CS345/DIGM345"],
-    "CS457": ["CS260", "CS270", "MATH221/MATH222"],
-    "CS458": ["CS457"],
-    "CS461": ["CS260"],
-    "CS465": ["CS303"],
-    "CS467": ["ECON201", "INFO110/INFO310", "PSY101"],
-    "CS472": ["CS361/CS282/ECEC353"],
-    "CS475": ["CS472/CS283/ECEC353"],
-    "CS476": ["CS281", "CS283"],
-    "CS479": ["CS475"],
-    "CS481": ["CS380", "MATH311/MATH410/ECE361"],
-    "SE310": ["SE211", "CS265", "CS260"],
-    "SE181": ["CS172"],
+  "classes": {
+    "CI101": {
+      "name": "Computing and Informatics Design I",
+      "description": "Introduces computing and informatics through a combination of lectures and hands-on laboratory exercises. Lectures emphasize an integrated view of topic areas and systems, spanning low-level software and implementation issues to high-level use and acceptance by individuals and communities. Lab exercises allow students to explore familiar systems in unique and novel ways to better understand how these systems are designed and used.",
+      "credits": "2.0",
+      "pre-reqs": []
+    },
+    "CI102": {
+      "name": "Computing and Informatics Design II",
+      "description": "Introduces computing and informatics through a combination of lectures and hands on laboratory exercises. Lectures emphasize an integrated view of topic areas and systems, spanning low level software and implementation issues to high level use and acceptance by individuals and communities. Lab exercises allow students to explore familiar systems in unique and novel ways to better understand how these systems are designed and used",
+      "credits": "2.0",
+      "pre-reqs": []
+    },
+    "CI103": {
+      "name": "Computing and Informatics Design III",
+      "description": "Follows CI 102 in the Computing & Informatics design sequence. Introduces computing and informatics through a combination of lectures and hands-on laboratory exercises. Lectures emphasize an integrated view of topic areas and systems, spanning low-level software and implementation issues to high-level use and acceptance by individuals and communities. Lab exercises allow students to explore familiar systems in unique and novel ways to better understand how these systems are designed and used.",
+      "credits": "2.0",
+      "pre-reqs": ["CI102"]
+    },
+    "CI491": {
+      "name": "Senior Project I",
+      "description": "Part of a multi-term capstone experience involving in-depth study and application of computing and informatics. Students work in teams to develop a significant product. Requires use of a development process that includes planning, specification, design, implementation, evaluation, and documentation. This course is writing intensive.",
+      "credits": "3.0",
+      "pre-reqs": ["CS451/INFO324/INFO442/SE310"]
+    },
+    "CI492": {
+      "name": "Senior Project II",
+      "description": "Part of a multi-term capstone experience involving in-depth study and application of computing and informatics. Students work in teams to develop a significant product. Requires use of a development process that includes planning, specification, design, implementation, evaluation, and documentation. This course is writing intensive.",
+      "credits": "3.0",
+      "pre-reqs": ["CI491"]
+    },
+    "CI493": {
+      "name": "Senior Project III",
+      "description": "Part of a multi-term capstone experience involving in-depth study and application of computing and informatics. Students work in teams to develop a significant product. Requires use of a development process that includes planning, specification, design, implementation, evaluation, and documentation. This course is writing intensive.",
+      "credits": "3.0",
+      "pre-reqs": ["CI492"]
+    },
+    "CS140": {
+      "name": "Introduction to Multimedia Programming",
+      "description": "Introduction to structured computer programming in a language designed for working with media (images, sound, video), e.g. Python/Jython. Topics include: variables, input and output, expressions, assignment statements, conditionals and branching, files, repetition, functions and parameter passing, one-dimensional and two-dimensional arrays, and media manipulation. Stresses good programming style, documentation, debugging, and testing.",
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS143": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS150": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS161": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS164": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS171": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS172": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS171/CS132/CS175"]
+    },
+    "CS175": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS176": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS171/CS175"]
+    },
+    "CS190": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS260": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS265"]
+    },
+    "CS265": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS172/CS176/CS133/SE103/ECEC301/ECEC201"]
+    },
+    "CS270": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS172/CS176/CS265/SE103/ECEC301/ECEC201"]
+    },
+    "CS277": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260"]
+    },
+    "CS281": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS270/ECE200", "CS172/CS176/SE103/ECEC301/ECEC201"]
+    },
+    "CS283": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS265"]
+    },
+    "CS300": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "CS270", "MATH200", "MATH201"]
+    },
+    "CS303": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "MATH221/MATH222", "MATH201/ENGR231"]
+    },
+    "CS314": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS338": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS350/SE310/CS275"]
+    },
+    "CS341": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": []
+    },
+    "CS342": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS345", "GMAP345"]
+    },
+    "CS345": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["DIGM260/GMAP260", "CS265/DIGM141"]
+    },
+    "CS352": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS281/ECEC355"]
+    },
+    "CS360": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "CS265", "CS270"]
+    },
+    "CS361": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "CS281/ECEC355"]
+    },
+    "CS365": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "CS265"]
+    },
+    "CS370": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS283/ECEC353"]
+    },
+    "CS375": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS265/CS164&CI103", "CS172/CS176"]
+    },
+    "CS377": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS283/ECEC353"]
+    },
+    "CS380": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "CS270"]
+    },
+    "CS383": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "MATH201/ENGR231", "MATH221/MATH222", "MATH311/MATH410/ECE361"]
+    },
+    "CS385": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "CS380"]
+    },
+    "CS387": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "CS380"]
+    },
+    "CS430": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "MATH201/MATH261/ENGR231"]
+    },
+    "CS431": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS430/CS432"]
+    },
+    "CS432": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "MATH201/MATH261/ENGR231"]
+    },
+    "CS435": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "MATH201/MATH261/ENGR231"]
+    },
+    "CS440": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "MATH201/MATH261/ENGR231"]
+    },
+    "CS441": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS270", "CS283/ECEC353", "CS360", "CS440"]
+    },
+    "CS442": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS441"]
+    },
+    "CS445": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS345/DIGM345"]
+    },
+    "CS457": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260", "CS270", "MATH221/MATH222"]
+    },
+    "CS458": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS457"]
+    },
+    "CS461": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS260"]
+    },
+    "CS465": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS303"]
+    },
+    "CS467": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["ECON201", "INFO110/INFO310", "PSY101"]
+    },
+    "CS472": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS361/CS282/ECEC353"]
+    },
+    "CS475": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS472/CS283/ECEC353"]
+    },
+    "CS476": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS281", "CS283"]
+    },
+    "CS479": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS475"]
+    },
+    "CS481": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS380", "MATH311/MATH410/ECE361"]
+    },
+    "SE310": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["SE211", "CS265", "CS260"]
+    },
+    "SE181": {
+      "name": "",
+      "description": ,
+      "credits": "3.0",
+      "pre-reqs": ["CS172"]
+    },
   }
 }
