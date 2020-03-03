@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CCI Schedule Interface</title>
+  <link rel="icon" type="image/png" href="Dragon_blue.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style>
+.scrollable {
+  height: 300px;
+  overflow: scroll;
+}
+
+* {
+  font-family: Nunito Sans;
+}
+
+.container-fluid {
+  visibility: collapse;
+}
+
+</style>
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-info-circle" style = "font-size: 30px; color: #07294D"></i></a>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="w3-animate-opacity" id="page-content">
+<div class="jumbotron text-center" style = "background-color: #07294D">
+  <img src = "Dragon_yellow.png" style="width:15%">
+  <h1 style="color: #FFC600">CCI Schedule Interface</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Schedule Name/Year</h3>
+      <form>
+  <div class="form-group">
+    <label for="SchName">Schedule Name</label>
+    <input type="text" class="form-control" id="SchName" placeholder="Joe's Schedule">
+  </div>
+  <div class="form-group">
+    <label for="YearSelect">Year</label>
+    <select class="form-control" id="YearSelect">
+      <option>Freshman</option>
+      <option>Sophomore</option>
+      <option>Pre-Junior</option>
+      <option>Junior</option>
+      <option>Senior</option>
+    </select>
+  </div>
+</form>
+    </div>
+    <div class="col-sm-6">
+      <h3>Preferences</h3>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="100level" value="option3">
+        <label class="form-check-label" for="100level">Level 100 classes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="200level" value="option3">
+        <label class="form-check-label" for="200level">Level 200 classes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="300level" value="option3">
+        <label class="form-check-label" for="300level">Level 300 classes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="WeedCheckbox" value="option1">
+        <label class="form-check-label" for="WeedCheckbox">Weed out classes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="CCIElecCheckbox" value="option2">
+        <label class="form-check-label" for="CCIElecCheckbox">CCI Electives</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="HighCheckbox" value="option3">
+        <label class="form-check-label" for="HighCheckbox">High workload</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="LowCheckbox" value="option3">
+        <label class="form-check-label" for="LowCheckbox">Low workload</label>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+      <h3>Classes Completed</h3>
+<div class = "scrollable">
+  <table class="table table-bordered table-striped mb-0">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">CRN</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="col-sm-6">
+  <h3>Search for classes</h3>
+  <form>
+<div class="form-group">
+<label for="SchSearch">Search</label>
+<input type="text" class="form-control" id="SchSearch" placeholder="Search by keywords, CRN, and credit hours">
+<a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D">Search</a>
+</div>
+</form>
+</div>
+</div>
+
+<div class = "container-fluid" style="margin-top: 20px;">
+  <h3>Search Results</h3>
+  <table class="table table-bordered table-striped mb-0">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">CRN</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Welcome to the site!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Welcome to the CCI Schedule Interface! This application will help you in making a schedule for any term and also helps selects classes depending on any preferences listed in the interface.
+        <br>
+        <br>
+        <hr id="footer">
+        <i class="material-icons">email</i>
+        mom34@drexel.edu
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+</html>
