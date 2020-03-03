@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>User Registration</title>
+      <link href="style.css" rel="stylesheet">
+      <script src="script.js" defer></script>
+   </head>
+
+   <body>
+       <h1>User Registration</h1>
+       <form>
+       <label for="fullName">Full Name</label>
+       <input type="text" id="fullName" label="Full Name" placeholder="Example Name">
+       <label for="email">Email</label>
+       <input type="email" id="email" label="Email" placeholder="valid@example.com">
+       <label for="password">Password</label>
+       <input type="password" id="password" label="Password">
+       <label for="passwordConfirm">Confirm Password</label>
+       <input type="password" id="passwordConfirm" label="Confirm password">
+       <input type="submit" id="submit" value="Register">     
+       <div id="formErrors" style="display: none"></div>
+        <ul id="errDisplay"></ul>
+       </form>
+   </body>
+</html>
