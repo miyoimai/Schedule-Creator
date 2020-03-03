@@ -1,3 +1,100 @@
 {
-  
+  "CS-core": {
+    "freshmen": {
+      "quarter1": ["CI101", "CS164"],
+      "quarter2": ["CI102", "CS171"],
+      "quarter3": ["CI103", "CS172"]
+    },
+    "sophomore":{
+      "quarter1": ["CS265", "CS270"],
+      "quarter2": ["CS260", "CS375"]
+    },
+    "pre-junior":{
+      "quarter1": ["CS281", "CS350/SE310"],
+      "quarter2": ["CS283", "CS360"]
+    },
+    "junior":{
+      "quarter1": ["SE181"]
+    },
+    "senior":{
+      "quarter1": ["CI491"],
+      "quarter2": ["CI492"],
+      "quarter3": ["CI493"]
+    }
+  },
+  "tracks": {
+    "algorithms": ["CS440", "CS457", "CS458"],
+    "ai": ["CS380", "CS383/CS385/CS387/CS481", "CS383/CS385/CS387/CS481"],
+    "security": ["CS472", "CS475", "CS303/CS377"],
+    "architecture": ["CS352", "CS476/ECEC356/ECEC413", "CS476/ECEC356/ECEC413"],
+    "graphics": ["CS430", "CS435", "CS431/CS432"],
+    "systems": ["CS361", "CS370", "CS352/CS365/CS441/CS461/CS472"],
+    "game": ["CS345", "CS341/CS342/CS387/CS445/GMAP377/GMAP378", "CS341/CS342/CS387/CS445/GMAP377/GMAP378"],
+    "HCI": ["CS338", "INFO310/PSY337", "CS345/CS432/GMAP345"],
+    "numeric": ["CS300", "MATH300", "CS303/MATH301/MATH305"],
+    "programming": ["CS440", "CS441", "CS442"],
+    "software": ["SE311", "SE220", "SE410"]
+  },
+  "pre-reqs": {
+    "CI101": [],
+    "CI102": [],
+    "CI103": ["CI102"],
+    "CI491": ["CS451/INFO324/INFO442/SE310"],
+    "CI492": ["CI491"],
+    "CI493": ["CI492"],
+    "CS140": [],
+    "CS143": [],
+    "CS150": [],
+    "CS161": [],
+    "CS164": [],
+    "CS171": [],
+    "CS172": ["CS171/CS132/CS175"],
+    "CS175": [],
+    "CS176": ["CS171/CS175"],
+    "CS190": [],
+    "CS260": ["CS265"],
+    "CS265": ["CS172/CS176/CS133/SE103/ECEC301/ECEC201"],
+    "CS270": ["CS172/CS176/CS265/SE103/ECEC301/ECEC201"],
+    "CS277": ["CS260"],
+    "CS281": ["CS270/ECE200", "CS172/CS176/SE103/ECEC301/ECEC201"],
+    "CS283": ["CS265"],
+    "CS300": ["CS260", "CS270", "MATH200", "MATH201"],
+    "CS303": ["CS260", "MATH221/MATH222", "MATH201/ENGR231"],
+    "CS314": [],
+    "CS338": ["CS350/SE310/CS275"],
+    "CS341": [],
+    "CS342": ["CS345", "GMAP345"],
+    "CS345": ["DIGM260/GMAP260", "CS265/DIGM141"],
+    "CS352": ["CS281/ECEC355"],
+    "CS360": ["CS260", "CS265", "CS270"],
+    "CS361": ["CS260", "CS281/ECEC355"],
+    "CS365": ["CS260", "CS265"],
+    "CS370": ["CS283/ECEC353"],
+    "CS375": ["CS265/CS164&CI103", "CS172/CS176"],
+    "CS377": ["CS283/ECEC353"],
+    "CS380": ["CS260", "CS270"],
+    "CS383": ["CS260", "MATH201/ENGR231", "MATH221/MATH222", "MATH311/MATH410/ECE361"],
+    "CS385": ["CS260", "CS380"],
+    "CS387": ["CS260", "CS380"],
+    "CS430": ["CS260", "MATH201/MATH261/ENGR231"],
+    "CS431": ["CS430/CS432"],
+    "CS432": ["CS260", "MATH201/MATH261/ENGR231"],
+    "CS435": ["CS260", "MATH201/MATH261/ENGR231"],
+    "CS440": ["CS260", "MATH201/MATH261/ENGR231"],
+    "CS441": ["CS270", "CS283/ECEC353", "CS360", "CS440"],
+    "CS442": ["CS441"],
+    "CS445": ["CS345/DIGM345"],
+    "CS457": ["CS260", "CS270", "MATH221/MATH222"],
+    "CS458": ["CS457"],
+    "CS461": ["CS260"],
+    "CS465": ["CS303"],
+    "CS467": ["ECON201", "INFO110/INFO310", "PSY101"],
+    "CS472": ["CS361/CS282/ECEC353"],
+    "CS475": ["CS472/CS283/ECEC353"],
+    "CS476": ["CS281", "CS283"],
+    "CS479": ["CS475"],
+    "CS481": ["CS380", "MATH311/MATH410/ECE361"],
+    "SE310": ["SE211", "CS265", "CS260"],
+    "SE181": ["CS172"],
+  }
 }
