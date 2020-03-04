@@ -4,10 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h2 style="text-align: center;">Registration!</h2>
+    <h2 style="text-align: center;">Registration</h2>
     <form action="/script.js" method="post">
     <div class="imgcontainer">
         <img src="DrexelVerticalBlue.png" style="width: 25%" alt="Avatar" class="avatar">
@@ -17,6 +23,15 @@
         <form>
             <label for="fullName">Full Name</label>
             <input type="text" id="fullName" label="Full Name" placeholder="Example Name">
+            <label for="email">Email</label>
+            <input type="email" id="email" label="Email" placeholder="valid@example.com">
+            <label for="password">Password</label>
+            <input type="password" id="password" label="Password">
+            <label for="passwordConfirm">Confirm Password</label>
+            <input type="password" id="passwordConfirm" label="Confirm password">
+            <input type="submit" id="submit" value="REGISTER" class="register" style="border-radius: 10px;">
+            <div id="formErrors" style="display: none"></div>
+            <ul id="errDisplay"></ul>
         </form>
         <!--
         <label for="uname"><b>Username</b></label>
@@ -24,15 +39,14 @@
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>-->
-        
-        <button type="submit" style="border-radius: 10px;">LOGIN</button>
+
         <label>
             <input type="checkbox" checked="checked"   name="remember"> Remember me
         </label>
     </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
+    <button type="button" class="cancelbtn" onclick="checkForm()">Cancel</button>
   </div>
 </form>
 
@@ -41,26 +55,7 @@
 
 
 <!--<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>User Registration</title>
-      <link href="style.css" rel="stylesheet">
-      <script src="script.js" defer></script>
-   </head>
-
-   <body>
-       <h1>User Registration</h1>
-       <form>
-       <label for="fullName">Full Name</label>
-       <input type="text" id="fullName" label="Full Name" placeholder="Example Name">
-       <label for="email">Email</label>
-       <input type="email" id="email" label="Email" placeholder="valid@example.com">
-       <label for="password">Password</label>
-       <input type="password" id="password" label="Password">
-       <label for="passwordConfirm">Confirm Password</label>
-       <input type="password" id="passwordConfirm" label="Confirm password">
-       <input type="submit" id="submit" value="Register">     
+     
        <div id="formErrors" style="display: none"></div>
         <ul id="errDisplay"></ul>
        </form>
