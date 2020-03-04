@@ -24,7 +24,7 @@ button:hover {
   opacity: 0.8;
 }
 
-.cancelbtn {
+.cancelbtn, .registerbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
@@ -55,7 +55,7 @@ span.psw {
      display: block;
      float: none;
   }
-  .cancelbtn {
+  .cancelbtn, .registerbtn {
      width: 100%;
   }
 }
