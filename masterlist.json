@@ -79,320 +79,320 @@
       "pre-reqs": []
     },
     "CS143": {
-      "name": "",
-      "description": ,
+      "name": "Computer Programming Fundamentals",
+      "description": "Introduction to structured computer programming in language of instruction (e.g. C++). Topics include: variables, input and output, expressions, assignment statements, conditionals and branching, files, repetition, functions and parameter passing, arrays, and string manipulation. Stresses good programming style, documentation, debugging and testing.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS150": {
-      "name": "",
-      "description": ,
+      "name": "Computer Science Principles",
+      "description": "An introduction to computer science principles: the big ideas and computational thinking practices central to computer science, and the societal impact of computing and information technology. Exposure to algorithms, big data, machine learning, privacy, security and digital citizenship while introducing and reinforcing the importance of programming.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS161": {
-      "name": "",
-      "description": ,
+      "name": "Introduction to Computing",
+      "description": "Introduction to the computer as a tool for productivity and communications. Provides fluency in the use of industry-standard software for professional communications and presentations, data analysis, and telecommunication. Introduce automation and programming to enhance the effective use of computers and computer applications.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS164": {
-      "name": "",
-      "description": ,
+      "name": "Introduction to Computer Science",
+      "description": "An introduction to the field of computer science. Exposure to core areas (selected from algorithms, artificial intelligence, computer architecture, databases, graphics, human-computer interaction, programming languages, scientific computation, software engineering) while introducing and reinforcing the importance of programming.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS171": {
-      "name": "",
-      "description": ,
+      "name": "Computer Programming I",
+      "description": "Introduces fundamental concepts of computing including memory, instructions, function calls, and activation records. Covers fundamentals of structured computer programming in the language of instruction: variables, input and output, expressions, assignment statements, conditionals and branching, subprograms, parameter passing, repetition, arrays, top-down design, testing, and debugging.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS172": {
-      "name": "",
-      "description": ,
+      "name": "Computer Programming II",
+      "description": "Covers object-oriented design, inheritance hierarchies, information hiding principles, string processing, recursion, good programming style, documentation, debugging, and testing.",
       "credits": "3.0",
       "pre-reqs": ["CS171/CS132/CS175"]
     },
     "CS175": {
-      "name": "",
-      "description": ,
+      "name": "Advanced Computer Programming I",
+      "description": "Advanced programming in language of instruction at an accelerated pace: introduces fundamental concepts of computing including memory, instructions, function calls, and activation records. Covers fundamentals of structured computer programming in the language of instruction: conditionals and branching, subprograms, parameter passing, repetition, arrays, top-down design, testing, and debugging. Supplements basic topics with deeper presentation of advanced techniques for those with some incoming programming experience.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS176": {
-      "name": "",
-      "description": ,
+      "name": "Advanced Computer Programming II",
+      "description": "Enhanced presentation of object-oriented design, inheritance hierarchies, information hiding principles, string processing, recursion, good programming style, documentation, debugging and testing. Includes special focus on language facilities and use of libraries.",
       "credits": "3.0",
       "pre-reqs": ["CS171/CS175"]
     },
     "CS190": {
-      "name": "",
-      "description": ,
+      "name": "Selected Computer Language",
+      "description": "Focuses on programming in a selected language of interest. Course content, language, and prerequisites may vary according to instructor, with emphasis on applications for which the language is designed. May be repeated for credit.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS260": {
-      "name": "",
-      "description": ,
+      "name": "Data Structures",
+      "description": "Covers stacks, queues, linked allocation, binary trees, internal searching and sorting, hashing, and applications.",
       "credits": "3.0",
       "pre-reqs": ["CS265"]
     },
     "CS265": {
-      "name": "",
-      "description": ,
+      "name": "Advanced Programming Tools and Techniques",
+      "description": "Introduction to the basic principles of programming practice: testing, debugging, portability, performance, design alternatives, and style. Application in a variety of programming languages, programming environments, and operating systems. Introduction to tools used in the software development process for improving program functionality, performance, and robustness.",
       "credits": "3.0",
       "pre-reqs": ["CS172/CS176/CS133/SE103/ECEC301/ECEC201"]
     },
     "CS270": {
-      "name": "",
-      "description": ,
+      "name": "Mathematical Foundations of Computer Science",
+      "description": "Introduces formal logic and its connections to Computer Science. Students learn to translate statements about the behavior of computer programs into logical claims and to prove such assertions using both traditional techniques and automated tools. Considers approaches to proving termination, correctness, and safety for programs. Discusses propositional and predicate logic, logical inference, recursion and recursively defined sets, mathematical induction, and structural induction.",
       "credits": "3.0",
       "pre-reqs": ["CS172/CS176/CS265/SE103/ECEC301/ECEC201"]
     },
     "CS277": {
-      "name": "",
-      "description": ,
+      "name": "Algorithms and Analysis",
+      "description": "Introduces foundational concepts in Computer Science theory, including computability, decidability, the Turing Machine, and algorithmic complexity. Applies concepts underlying graph theory and automata to current topics in computing to create contextualized connections between theory and practice.",
       "credits": "3.0",
       "pre-reqs": ["CS260"]
     },
     "CS281": {
-      "name": "",
-      "description": ,
+      "name": "Systems Architecture",
+      "description": "Covers internal function and organization of digital computers, including instruction sets, addressing methods, input-output architectures, central processor organization, machine language, and assembly language.",
       "credits": "3.0",
       "pre-reqs": ["CS270/ECE200", "CS172/CS176/SE103/ECEC301/ECEC201"]
     },
     "CS283": {
-      "name": "",
-      "description": ,
+      "name": "Systems Programming",
+      "description": "This course introduces computer systems, including interaction of hardware and software through the operating system, from the programmer's perspective. Three fundamental abstractions are emphasized: processes, virtual memory, and files. These abstractions provide programmers a common interface to a wide variety of hardware devices. Topics covered include linking, system level I/O, concurrent programming, and network programming.",
       "credits": "3.0",
       "pre-reqs": ["CS265"]
     },
     "CS300": {
-      "name": "",
-      "description": ,
+      "name": "Applied Symbolic Computation",
+      "description": "This course covers the fundamentals of symbolic mathematical methods as embodied in symbolic mathematics software systems, including: fundamental techniques, simplification of expressions, solution of applications problems, intermediate expressions swell, basic economics of symbolic manipulation, efficient solution methods for large problems, hybrid symbolic/numeric techniques.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "CS270", "MATH200", "MATH201"]
     },
     "CS303": {
-      "name": "",
-      "description": ,
+      "name": "Algorithmic Number Theory and Cryptography",
+      "description": "Covers fundamental algorithms for integer arithmetic, greatest common divisor calculation, modular arithmetic, and other number theoretic computations. Algorithms are derived, implemented and analyzed for primality testing and integer factorization. Applications to cryptography are explored including symmetric and public-key cryptosystems. A cryptosystem will be implemented and methods of attack investigated.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "MATH221/MATH222", "MATH201/ENGR231"]
     },
     "CS314": {
-      "name": "",
-      "description": ,
+      "name": "Computing in the Small",
+      "description": "Explores the technologies and techniques associated with microcontrollers and Systems on Chips (SOCs) as well as their use in embedded systems. A major focus is on developing software to control input and output devices.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS338": {
-      "name": "",
-      "description": ,
+      "name": "Graphical User Interfaces",
+      "description": "This course covers the design and implementation of graphical user interfaces. Topics include: event-driven programming, application programmer interfaces, widgets, callback functions, windowing systems and desktops, rapid prototyping languages, multithreaded GUI's. A term project involving implementation of a complex application will be undertaken.",
       "credits": "3.0",
       "pre-reqs": ["CS350/SE310/CS275"]
     },
     "CS341": {
-      "name": "",
-      "description": ,
+      "name": "Serious Game Development",
+      "description": "The goal of this course is to learn more about serious games, that is games used in a non-entertainment context, such as games for health, education, and persuasion, through readings and through the design, development, and implementation of serious games.",
       "credits": "3.0",
       "pre-reqs": []
     },
     "CS342": {
-      "name": "",
-      "description": ,
+      "name": "Experimental Game Development",
+      "description": "The goal of this course is to develop new ideas and innovations in games through the design, development, and implementation of games using short development cycles and creative thematic constraints.",
       "credits": "3.0",
       "pre-reqs": ["CS345", "GMAP345"]
     },
     "CS345": {
-      "name": "",
-      "description": ,
+      "name": "Computer Game Design and Development",
+      "description": "This course introduces students to the computer game design process. Students also learn how the individual skills of modeling, animation, scripting, interface design and story telling are coordinated to produce interactive media experiences for various markets, devices and purposes.",
       "credits": "3.0",
       "pre-reqs": ["DIGM260/GMAP260", "CS265/DIGM141"]
     },
     "CS352": {
-      "name": "",
-      "description": ,
+      "name": "Processor Architecture & Analysis",
+      "description": "This course covers performance evaluation and benchmarking, pipelining, superscalar processors, multiprocessors, and interfacing processors and peripherals. The memory hierarchy, including cache and virtual memory, are also explored from a programmer's perspective with high-performance computing techniques in mind.",
       "credits": "3.0",
       "pre-reqs": ["CS281/ECEC355"]
     },
     "CS360": {
-      "name": "",
-      "description": ,
+      "name": "Programming Language Concepts",
+      "description": "Introduces the design and implementation of modern programming languages: formal theory underlying language implementation; concerns in naming, binding, storage allocation and typing; semantics of expressions and operators, control flow, and subprograms; procedural and data abstraction; functional, logic, and object-oriented languages. Students will construct an interpreter for a nontrivial language.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "CS265", "CS270"]
     },
     "CS361": {
-      "name": "",
-      "description": ,
+      "name": "Concurrent Programming",
+      "description": "Covers programming of concurrent, cooperating sequential processes. Studies race conditions, critical sections, mutual exclusion, process synchronization, semaphores, monitors, message passing, the rendezvous, deadlock, and starvation.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "CS281/ECEC355"]
     },
     "CS365": {
-      "name": "",
-      "description": ,
+      "name": "System Administration",
+      "description": "Fundamentals of system administration featuring hands-on practice with an industry standard operating system. Focus on installation, maintenance and management of several systems for multi-user environments.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "CS265"]
     },
     "CS370": {
-      "name": "",
-      "description": ,
+      "name": "Operating Systems",
+      "description": "Explores the internal algorithms and structures of operating systems: CPU scheduling, memory management, file systems, and device management. Considers the operating system as a collection of cooperating sequential processes (servers) providing an extended or virtual machine that is easier to program than the underlying hardware. Topics include virtual memory, input/output devices, disk request scheduling, deadlocks, file allocation, and security and protection.",
       "credits": "3.0",
       "pre-reqs": ["CS283/ECEC353"]
     },
     "CS375": {
-      "name": "",
-      "description": ,
+      "name": "Web and Mobile App Development",
+      "description": "This course introduces students to web-based and mobile development technologies and practices, including tiered application development, Service-Oriented Architectures and associated exchange protocols, and web-database programming. This course explores development and integration of web services from well-known providers as well as services created by the student, using a mobile platform as a vehicle for interactions with the services.",
       "credits": "3.0",
       "pre-reqs": ["CS265/CS164&CI103", "CS172/CS176"]
     },
     "CS377": {
-      "name": "",
-      "description": ,
+      "name": "Software Security",
+      "description": "This course introduces students to foundational concepts underpinning the broad area of software security. It covers topics such as cryptography, access control, software flaws, malicious software, insecurity in software, and operating systems security.",
       "credits": "3.0",
       "pre-reqs": ["CS283/ECEC353"]
     },
     "CS380": {
-      "name": "",
-      "description": ,
+      "name": "Artificial Intelligence",
+      "description": "Explores the foundations of artificial intelligence: production systems, heuristic programming, knowledge representation, and search algorithms. Also covers programming in an AI language. Additional topics chosen from game theory, decision support systems, pattern matching and recognition, image understanding, natural language, fuzzy and non-monotonic logic, machine learning, theorem proving, and common sense reasoning.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "CS270"]
     },
     "CS383": {
-      "name": "",
-      "description": ,
+      "name": "Machine Learning",
+      "description": "This course covers the fundamentals of modern statistical machine learning. Lectures will cover the theoretical foundation and algorithmic details of representative topics including probabilities and decision theory, regression, classification, graphical models, mixture models, clustering, expectation maximization, hidden Markov models, and weak learning.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "MATH201/ENGR231", "MATH221/MATH222", "MATH311/MATH410/ECE361"]
     },
     "CS385": {
-      "name": "",
-      "description": ,
+      "name": "Evolutionary Computing",
+      "description": "This course covers computational intelligence approaches to problem solving for classification, adaptation, optimization, and automated control. Methods covered will include evolutionary programming/genetic algorithms, genetic programming, neural networks, swarm optimization, and fuzzy logic.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "CS380"]
     },
     "CS387": {
-      "name": "",
-      "description": ,
+      "name": "Game AI Development",
+      "description": "This course focuses on artificial intelligence (AI) techniques for computer games. Students will learn both basic and advanced AI techniques that are used in a variety of game genres including first-person shooters, driving games, strategy games, platformers, etc. The course will emphasize the difference between traditional AI and game AI, the latter having a strong design component, focusing on creating games that are “fun to play.” Topics include path-finding, decision-making, strategy and machine learning in games.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "CS380"]
     },
     "CS430": {
-      "name": "",
-      "description": ,
+      "name": "Computer Graphics",
+      "description": "The course presents the fundamental geometric representations and drawing algorithms of computer graphics through lectures and programming assignments. The representations include lines, curves, splines, polygons, meshes, parametric surfaces and solids. The algorithms include line drawing, curve and surface evaluation, polygon filling, clipping, 3D-to-2D projection and hidden surface removal.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "MATH201/MATH261/ENGR231"]
     },
     "CS431": {
-      "name": "",
-      "description": ,
+      "name": "Advanced Rendering Techniques",
+      "description": "The creation of realistic images from 3D models is central to the development of computer graphics. The ray tracing algorithm has become one of the most popular and powerful techniques for creating photo-realistic images. This class explores the algorithmic components of ray tracing. Students implement many of these components in their class programming projects.",
       "credits": "3.0",
       "pre-reqs": ["CS430/CS432"]
     },
     "CS432": {
-      "name": "",
-      "description": ,
+      "name": "Interactive Computer Graphics",
+      "description": "This is a project-oriented class that covers the concepts and programming details of interactive computer graphics. These include graphics primitives, display lists, picking, shading, rendering buffers and transformations. Students will learn an industry-standard graphics system by implementing weekly programming assignments. The course culminates with a student-defined project.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "MATH201/MATH261/ENGR231"]
     },
     "CS435": {
-      "name": "",
-      "description": ,
+      "name": "Computational Photography",
+      "description": "Fundamentals of computational photography, an interdisciplinary field at the intersection of computer vision, graphics, and photography. Covered topics include fundamentals of cameras, novel camera designs, image manipulation, single-view modeling, and image-based rendering with an emphasis on learning the computational methods and their underlying mathematical concepts through hands-on assignments.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "MATH201/MATH261/ENGR231"]
     },
     "CS440": {
-      "name": "",
-      "description": ,
+      "name": "Theory of Computation",
+      "description": "Finite automata, regular sets, and regular expressions; pushdown automata, context-free languages, and normal forms for grammars; Turing machines and recursively enumerable sets; Chomsky hierarchy; computability theory.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "MATH201/MATH261/ENGR231"]
     },
     "CS441": {
-      "name": "",
-      "description": ,
+      "name": "Compiler Workshop I",
+      "description": "Design and implementation of compiler for specified language. Practical application and in-depth study of parsing, scanning, run-time storage management, type analysis, code generation, and error recovery.",
       "credits": "3.0",
       "pre-reqs": ["CS270", "CS283/ECEC353", "CS360", "CS440"]
     },
     "CS442": {
-      "name": "",
-      "description": ,
+      "name": "Compiler Workshop II",
+      "description": "Continuation of CS 441. Advanced topics in compilation, code generation, and optimization for various programming languages and paradigms.",
       "credits": "3.0",
       "pre-reqs": ["CS441"]
     },
     "CS445": {
-      "name": "",
-      "description": ,
+      "name": "Topics in Computer Gaming",
+      "description": "Contemporary topics in the design and implementation of computer games. Topics may include game genres, psychological and sociological aspects of games, software tools and game development engines, character and behavior modeling, physical models and realism, virtual reality, graphics and animation, network-based games, performance analysis and efficiency.",
       "credits": "3.0",
       "pre-reqs": ["CS345/DIGM345"]
     },
     "CS457": {
-      "name": "",
-      "description": ,
+      "name": "Data Structure and Algorithms I",
+      "description": "This course covers techniques for analyzing algorithms, including: asymptotic analysis, recurrence relations, and probabilistic analysis; data structures such as hash tables and binary trees; algorithm design techniques such as dynamic programming, greedy methods, and divide & conquer, as well as graph algorithms for graph traversal, minimum spanning trees, and shortest paths.",
       "credits": "3.0",
       "pre-reqs": ["CS260", "CS270", "MATH221/MATH222"]
     },
     "CS458": {
-      "name": "",
-      "description": ,
+      "name": "Data Structures and Algorithms II",
+      "description": "This course covers the amortized analysis of algorithms and data structures; Fibonacci heaps; graph algorithms for maximizing network flow and computing minimum all pairs shortest paths; string matching algorithms; NP-Completeness and approximation algorithms.",
       "credits": "3.0",
       "pre-reqs": ["CS457"]
     },
     "CS461": {
-      "name": "",
-      "description": ,
+      "name": "Database Systems",
+      "description": "Covers topics including structure and function of database systems, normal form theory, data models (relational, network, and hierarchical), query processing (ISBL), relational algebra and calculus, and file structures. Includes programming project using DBMS.",
       "credits": "3.0",
       "pre-reqs": ["CS260"]
     },
     "CS465": {
-      "name": "",
-      "description": ,
+      "name": "Privacy and Trust",
+      "description": "This course will motivate the need for privacy protection and introduce basic privacy properties such as anonymity, unlinkability or unobservability. We will then discuss how these properties can be formalized, modeled and measured. The course will provide a broad overview of the state-of-the-art in privacy technologies, explain the main issues that these technologies address, what the current solutions are able to achieve, and the remaining open problems.",
       "credits": "3.0",
       "pre-reqs": ["CS303"]
     },
     "CS467": {
-      "name": "",
-      "description": ,
+      "name": "Security and Human Behavior",
+      "description": "Humans are usually the weakest link in information security. Technical measures are easily thwarted by end- user decisions. How are end user decisions made? This course examines security decisions online from the distinct perspective of economics, psychology, anthropology, evolutionary biology, and criminology. We will address topics such as System I vs. System II, mental models, risk perceptions, safety engineering, groups behaviors in primates.",
       "credits": "3.0",
       "pre-reqs": ["ECON201", "INFO110/INFO310", "PSY101"]
     },
     "CS472": {
-      "name": "",
-      "description": ,
+      "name": "Computer Networks: Theory, Applications, and Programming",
+      "description": "Introduction to computer networking theory, applications and programming, focusing on large heterogeneous networks. Broad topdown introductions to computer networking concepts including distributed applications, socket programming, operation system and router support, router algorithms, and sending bits over congested, noisy and unreliable communication links.",
       "credits": "3.0",
       "pre-reqs": ["CS361/CS282/ECEC353"]
     },
     "CS475": {
-      "name": "",
-      "description": ,
+      "name": "Computer and Network Security",
+      "description": "The key objective of this course is to provide a thorough understanding of technologies and methodologies with which computer networks can be protected. Topics that are covered include: key management and credentials, steganography and watermarking, networking security (VPNs, firewalls, intrusion detection) and system security policies.",
       "credits": "3.0",
       "pre-reqs": ["CS472/CS283/ECEC353"]
     },
     "CS476": {
-      "name": "",
-      "description": ,
+      "name": "High Performance Computing",
+      "description": "This course is an introduction to high performance computing, including concepts and applications. Course contents will include discussions of different types of high performance computer architectures (multi-core/multi-threaded processors, parallel computers, etc), the design, implementation, optimization and analysis of efficient algorithms for uni-processors, multi-threaded processors, parallel computers, and high performance programming.",
       "credits": "3.0",
       "pre-reqs": ["CS281", "CS283"]
     },
     "CS479": {
-      "name": "",
-      "description": ,
+      "name": "Advanced Network Security",
+      "description": "A study of what it takes to make a network secure, starting with an analysis of the sometimes conflicting goals (e.g. anonymity vs. traceability) through the mechanisms that can be used to achieve these goals. Covers in depth both the design options available and the design decisions made in various deployed systems, including Kerberos, IPsec, SSL, and X.509.",
       "credits": "3.0",
       "pre-reqs": ["CS475"]
     },
     "CS481": {
-      "name": "",
-      "description": ,
+      "name": "Advanced Artificial Intelligence",
+      "description": "This course covers topics in representation, reasoning, and decision-making under uncertainty; learning; solving problems with time-varying properties. Assignments applying AI techniques toward building intelligent machines that interact with dynamic, uncertain worlds will be given.",
       "credits": "3.0",
       "pre-reqs": ["CS380", "MATH311/MATH410/ECE361"]
     },
     "SE310": {
-      "name": "",
-      "description": ,
+      "name": "Software Architecture I",
+      "description": "Study of macro-level software system architectures with an emphasis on approaches to interconnection and distribution of current and emerging architectural styles.",
       "credits": "3.0",
       "pre-reqs": ["SE211", "CS265", "CS260"]
     },
     "SE181": {
-      "name": "",
-      "description": ,
+      "name": "Introduction to Software Engineering and Development",
+      "description": "Introduces advanced software development fundamentals including memory management, typing and scoping, datastores, software testing, and security, as well as user-centric design and user experience. This course will be taught using a specified programming language of instruction.",
       "credits": "3.0",
       "pre-reqs": ["CS172"]
     },
