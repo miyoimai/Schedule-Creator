@@ -59,3 +59,12 @@ span.psw {
      width: 100%;
   }
 }
+
+ul li{
+    align-content: center;
+    list-style-position: inside;
+    text-align: left;
+    font-weight: bold; 
+    color: rgb(255, 0, 0)
+}
+
