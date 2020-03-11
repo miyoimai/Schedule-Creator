@@ -66,16 +66,17 @@
       <option>Senior</option>
     </select>
   </div>
+  <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D" onclick="ChangeQuar()">Change Quarters</a>
 </form>
     </div>
     <div class="col-sm-6">
       <h3>Preferences</h3>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="100level" value="option3">
+        <input class="form-check-input" type="checkbox" id="100level" value="option1">
         <label class="form-check-label" for="100level">Level 100 classes</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="200level" value="option3">
+        <input class="form-check-input" type="checkbox" id="200level" value="option2">
         <label class="form-check-label" for="200level">Level 200 classes</label>
       </div>
       <div class="form-check">
@@ -83,35 +84,53 @@
         <label class="form-check-label" for="300level">Level 300 classes</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="WeedCheckbox" value="option1">
-        <label class="form-check-label" for="WeedCheckbox">Weed out classes</label>
+        <input class="form-check-input" type="checkbox" id="400level" value="option4">
+        <label class="form-check-label" for="400level">Level 400 classes</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="CCIElecCheckbox" value="option2">
+        <input class="form-check-input" type="checkbox" id="CCIElecCheckbox" value="option5">
         <label class="form-check-label" for="CCIElecCheckbox">CCI Electives</label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="HighCheckbox" value="option3">
-        <label class="form-check-label" for="HighCheckbox">High workload</label>
+        <input class="form-check-input" type="checkbox" id="CCICorCheckbox" value="option6">
+        <label class="form-check-label" for="CCIECorCheckbox">CCI Core Classes</label>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="LowCheckbox" value="option3">
-        <label class="form-check-label" for="LowCheckbox">Low workload</label>
+      <div class="form-group" style="margin-top: 20px">
+        <label for="ConcenSelect">Track</label>
+        <select class="form-control" id="ConcenSelect">
+          <option>Algorithms and Data Structures</option>
+          <option>Artificial Intelligence</option>
+          <option>Computer and Network Security</option>
+          <option>Computer Architecture</option>
+          <option>Computer Graphics and Vision</option>
+          <option>Computing Systems</option>
+          <option>Game Development and Design</option>
+          <option>Graphics and Interaction</option>
+          <option>Human-Computer Interaction</option>
+          <option>Intelligent Systems</option>
+          <option>Programming Languages</option>
+          <option>Software and Security</option>
+          <option>Software Engineering</option>
+          <option>Systems and High-Performance Computing</option>
+          <option>Theory and Computation</option>
+        </select>
       </div>
     </div>
 </div>
 
 <div class="row">
     <div class="col-sm-6">
-      <h3>Classes Completed</h3>
-<div class = "scrollable">
+      <h3>Classes Selected</h3>
+<div id="Q1">
+  <h4>Quarter 1</h4>
+<div class = "scrollable" id="Q1">
   <table class="table table-bordered table-striped mb-0">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Class Code</th>
         <th scope="col">Class Name</th>
-        <th scope="col">Grade</th>
+        <th scope="col">Credits</th>
       </tr>
     </thead>
     <tbody>
@@ -155,19 +174,129 @@
   </table>
 </div>
 </div>
+
+<div id="Q2" style= "display:none;">
+    <h4>Quarter 2</h4>
+<div class = "scrollable" id ="Q2">
+  <table class="table table-bordered table-striped mb-0">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Class Code</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<div id="Q3" style= "display:none;">
+    <h4>Quarter 3</h4>
+<div class = "scrollable">
+  <table class="table table-bordered table-striped mb-0">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Class Code</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+</div>
 <div class="col-sm-6">
   <h3>Search for classes</h3>
   <form>
 <div class="form-group">
 <label for="SchSearch">Search</label>
-<input type="text" class="form-control" id="SchSearch" placeholder="Search by keywords, CRN, and credit hours">
+<input type="text" class="form-control" id="SchSearch" placeholder="Search by keywords and credit hours">
 <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D">Search</a>
 </div>
 </form>
 </div>
 </div>
 
-<div class = "container-fluid" style="margin-top: 20px;">
+<div class = "container-fluid" style="margin-top: 20px; margin-bottom: 20px;">
   <h3>Search Results</h3>
   <table class="table table-bordered table-striped mb-0">
     <thead>
@@ -175,7 +304,7 @@
         <th scope="col">#</th>
         <th scope="col">Class Code</th>
         <th scope="col">Class Name</th>
-        <th scope="col">Grade</th>
+        <th scope="col">Credits</th>
       </tr>
     </thead>
     <tbody>
@@ -247,5 +376,35 @@
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+function ChangeQuar() {
+  if (document.getElementById("YearSelect").value == "Freshman") {
+    console.log("Naw!")
+    document.getElementById("Q1").style.display = "block";
+    document.getElementById("Q2").style.display = "block";
+    document.getElementById("Q3").style.display = "block";
+  }
+  if (document.getElementById("YearSelect").value == "Sophomore") {
+    document.getElementById("Q1").style.display = "block";
+    document.getElementById("Q2").style.display = "block";
+    document.getElementById("Q3").style.display = "none";
+  }
+  if (document.getElementById("YearSelect").value == "Junior") {
+    document.getElementById("Q1").style.display == "block";
+    document.getElementById("Q2").style.display == "block";
+    document.getElementById("Q3").style.display == "none";
+  }
+  if (document.getElementById("YearSelect").value == "Pre-Junior") {
+    console.log("Pre-Junior")
+    document.getElementById("Q1").style.display = "block";
+    document.getElementById("Q2").style.display = "block";
+    document.getElementById("Q3").style.display = "none";
+  }
+  if (document.getElementById("YearSelect").value == "Senior") {
+    document.getElementById("Q1").style.display = "block";
+    document.getElementById("Q2").style.display = "block";
+    document.getElementById("Q3").style.display = "block";
+  }
+}
 </script>
 </html>
