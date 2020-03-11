@@ -1,46 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Login Register</title>
- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
- <link rel="stylesheet" 
- href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
- <style>
-  html{
-   padding:50px;
-  }
- </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
- <div class="container">
-  <div class="col-sm-6 col-sm-offset-3">
-   <h2>Login</h2>
 
-   <% if(message.length > 0) { %>
+<body>
+<div class="container">
+	<% if(message.length > 0) { %>
     <div class="alert alert-danger"><%= message %></div> 
    <% } %>
-
-   <form action="/login" method="post">
-    <div class="form-group">
-     <label>Username</label>
-     <input type="text" class="form-control" name="username">
-    </div>
-    <div class="form-group">
-     <label>Password</label>
-     <input type="password" class="form-control" name="password">
+    
+    <form action="/login" method="post">
+    <div class="imgcontainer">
+        <img src="Drexel_vertical_blue.png" alt="Avatar" class="avatar">
     </div>
 
-    <button type="submit" class="btn btn-succcess btn-lg">Login</button>
-   </form>
+    <div class="container">
+        <a href="/signup"><button type="button" class="registerbtn" style="float: right; font-size: 12px; border-radius: 5px; padding: none;  align-content: center;"><strong>Register Here!</strong></button></a>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" class="form-control" name="username">
 
-   <hr>
-
-   <p>Need an account <a href="/signup">Register</a></p>
-   <p>Go Back <a href="/">Home</a>.</p>
-  </div>
- </div>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" class="form-control" name="password">
+        <button type="submit" class="btn btn-succcess btn-lg" style="border-radius: 10px;"><strong>LOGIN</strong></button>
+        <label>
+            <input type="checkbox" checked="checked"   name="remember"> Remember me
+        </label>
+    </div>        
+</form>
 </body>
 </html>
