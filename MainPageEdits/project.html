@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <style>
 .scrollable {
@@ -30,7 +32,7 @@
 }
 
 </style>
-<body onload="ChangeQuar()">
+<body onload="load()">
   <nav class="navbar navbar-light bg-light justify-content-between">
     <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-info-circle" style = "font-size: 25px; color: #07294D"></i></a>
 
@@ -45,40 +47,42 @@
 </div>
 
 <div class="container">
-  <div class="row">
+<div class="row">
     <div class="col-sm-6">
       <h3>Schedule Year</h3>
       <form>
-  <div class="form-group">
-    <label for="YearSelect">Year</label>
-    <select class="form-control" id="YearSelect">
-      <option>Freshman</option>
-      <option>Sophomore</option>
-      <option>Pre-Junior</option>
-      <option>Junior</option>
-      <option>Senior</option>
-    </select>
-  </div>
-  <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D" onclick="ChangeQuar()">Change Quarters</a>
-</form>
+      <div class="form-group">
+        <label for="YearSelect">Year</label>
+        <select class="form-control" id="YearSelect">
+          <option>Freshman</option>
+          <option>Sophomore</option>
+          <option>Pre-Junior</option>
+          <option>Junior</option>
+          <option>Senior</option>
+        </select>
+      </div>
+          <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D; margin-right: 10px;" onclick="ChangeQuar()">Change Quarters</a>
+          <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D; margin-right: 10px;" onclick="popSearch()">Search</a>
+          <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D; " onclick="reset()">Reset</a>
+    </form>
     </div>
     <div class="col-sm-6">
-      <h3>Preferences</h3>
+      <h3>Search Preferences</h3>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="100level" value="option1">
-        <label class="form-check-label" for="100level">Level 100 classes</label>
+        <label class="form-check-label" for="100level" style="padding-left: 20px;">Level 100 classes</label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="200level" value="option2">
-        <label class="form-check-label" for="200level">Level 200 classes</label>
+        <label class="form-check-label" for="200level" style="padding-left: 20px;">Level 200 classes</label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="300level" value="option3">
-        <label class="form-check-label" for="300level">Level 300 classes</label>
+        <label class="form-check-label" for="300level" style="padding-left: 20px;">Level 300 classes</label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="400level" value="option4">
-        <label class="form-check-label" for="400level">Level 400 classes</label>
+        <label class="form-check-label" for="400level" style="padding-left: 20px;">Level 400 classes</label>
       </div>
       <div class="form-group" style="margin-top: 20px">
         <label for="ConcenSelect">Track</label>
@@ -96,9 +100,10 @@
           <option>Software Engineering</option>
           <option>Theory and Computation</option>
         </select>
-      </div>
+        </div>
     </div>
 </div>
+
 
 <div class="row">
     <div class="col-sm-6">
@@ -106,7 +111,7 @@
 <div id="Q1">
   <h4>Quarter 1</h4>
 <div class = "scrollable" id="Q1">
-  <table class="table table-bordered table-striped mb-0">
+  <table class="table table-bordered table-striped mb-0 col-sm-12" >
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -115,38 +120,38 @@
         <th scope="col">Credits</th>
       </tr>
     </thead>
-    <tbody id="Q1body">
-      <tr>
+    <tbody id="Q1body" style="cursor: pointer;">
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">1</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">2</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">3</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">4</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">5</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">6</th>
         <td></td>
         <td></td>
@@ -160,7 +165,7 @@
 <div id="Q2" style= "display:none;">
     <h4>Quarter 2</h4>
 <div class = "scrollable" id ="Q2">
-  <table class="table table-bordered table-striped mb-0">
+  <table class="table table-bordered table-striped mb-0" style="cursor: pointer;">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -169,20 +174,20 @@
         <th scope="col">Credits</th>
       </tr>
     </thead>
-    <tbody id="Q2body">
-      <tr>
+    <tbody id="Q2body" style="cursor: pointer;">
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">1</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">2</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">3</th>
         <td></td>
         <td></td>
@@ -194,13 +199,13 @@
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">5</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">6</th>
         <td></td>
         <td></td>
@@ -211,7 +216,7 @@
 </div>
 </div>
 
-<div id="Q3" style= "display:none;">
+<div id="Q3" style= "display:none;" >
     <h4>Quarter 3</h4>
 <div class = "scrollable">
   <table class="table table-bordered table-striped mb-0">
@@ -223,38 +228,38 @@
         <th scope="col">Credits</th>
       </tr>
     </thead>
-    <tbody id="Q3body">
-      <tr>
+    <tbody id="Q3body" style="cursor: pointer;">
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">1</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">2</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">3</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">4</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">5</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
-      <tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
         <th scope="row">6</th>
         <td></td>
         <td></td>
@@ -266,19 +271,9 @@
 </div>
 
 </div>
+       
 <div class="col-sm-6">
-  <h3>Search for classes</h3>
-  <form>
-<div class="form-group">
-<label for="SchSearch">Search</label>
-<input type="text" class="form-control" id="SchSearch" placeholder="Search by keywords and credit hours">
-<a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D" onclick="popSearch()">Search</a>
-</div>
-</form>
-</div>
-</div>
-
-<div  id="Search" class = "scrollable" style="margin-top: 20px; margin-bottom: 20px; display: none;">
+<div  id="Search" class = "scrollable" style="margin-top: 32px; margin-bottom: 20px; display: none; height:465px;">
   <h3>Search Results</h3>
   <table class="table table-bordered table-striped mb-0"> 
     <thead>
@@ -289,47 +284,14 @@
       </tr>
     </thead>
     <tbody id="searchbody">
-      <!--<tr>
-        <th scope="row">1</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>-->
+  
     </tbody>
   </table>
+</div>    
 </div>
 </div>
-</div>
+
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -346,22 +308,34 @@
         <br>
         <hr id="footer">
         <i class="material-icons">email</i>
-        mom34@drexel.edu
+        mom34@drexel.edu, enc44@drexel.edu, 
       </div>
     </div>
   </div>
 </div>
 
 </body>
+
 <script src="./courseDatabase.js"></script>
 <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 var schedule = {"freshman": {"quarter1": ["CI101", "CS164"],"quarter2": ["CI102", "CS171"],"quarter3": ["CI103", "CS172"]},"sophomore":{"quarter1": ["CS265", "CS270"],"quarter2": ["CS260", "CS375"]},"pre-junior":{"quarter1": ["CS281", "SE310"],"quarter2": ["CS283", "CS360"]},"junior":{"quarter1": ["SE181"],"quarter2":[]},"senior":{"quarter1": ["CI491"],"quarter2": ["CI492"],"quarter3": ["CI493"]}};
 
 var currentYear = "freshman";
+var storedClass = "";
+    
+function load(){
+    document.getElementById("Q1").style.display = "block";
+    document.getElementById("Q2").style.display = "block";
+    document.getElementById("Q3").style.display = "block";
+    
+    populateCore("freshman",1);
+    populateCore("freshman",2);
+    populateCore("freshman",3);
+}
     
 function ChangeQuar() {
   if (document.getElementById("YearSelect").value == "Freshman") {
@@ -432,13 +406,29 @@ function ChangeQuar() {
 function populateCore(year,qn){
     var Qid = "Q" + qn +"body";
     var table = document.getElementById(Qid);
-    var classes = getCore(year,qn);
+    var classes = getSchedule(year,qn);
     
     for(var r in classes){
         for(var c = 0; c<3; c++){
             table.rows[r].cells[c+1].innerHTML = classes[r][c];
         }
+        var des = getDescription(classes[r][0])
+        table.rows[r].title = classes[r][0] + ": " + des;
     }
+}
+    
+function getSchedule(year,quarter){
+    var q = "quarter" + quarter;
+    var y = schedule[year];
+    var classList = y[q];
+    var classArray = [];
+    
+    for(var i in classList){
+        var c = getClassInfo(classList[i]);
+        classArray.push(c);
+    }
+    
+    return classArray;
 }
     
 function addSearchRows(classes,searchName){
@@ -453,7 +443,7 @@ function addSearchRows(classes,searchName){
     
     for(r in classes){ 
         var tr = document.createElement("tr");
-        
+        var pick = false;
         for(var c = 0; c<3; c++){
             if(c==0 && classes[r][c]=="options"){
                 var tr = document.createElement("tr");
@@ -464,14 +454,31 @@ function addSearchRows(classes,searchName){
                
                 var options = classes[r][2];
                 c=3;
-                
+                pick = true;
             }
             else{
                 var td = document.createElement("td");
+                
                 td.innerHTML = classes[r][c];
                 tr.appendChild(td);
             }
         }
+        if(pick != true){
+            tr.style.cursor = "pointer";
+            tr.addEventListener("click",function(){
+                storedClass = this.firstChild.innerHTML;
+            });
+            var c = tr.firstChild.innerHTML;
+            
+            tr["data-toggle"] = "tooltip";
+            tr["data-placement"] = "top";
+            
+            var des = getDescription(c);
+            tr.title = c + ": " + des;
+        }
+//            tr.addEventListener("click",function{
+//                tr.style.color = "white";        
+//            });
         table.appendChild(tr);
     }
     
@@ -482,12 +489,22 @@ function addSearchRows(classes,searchName){
             td.innerHTML = options[i][k];
             tr.appendChild(td);
         }
-    table.appendChild(tr);
+        tr.style.cursor = "pointer";
+            tr.addEventListener("click",function(){
+                storedClass = this.firstChild.innerHTML;
+        });
+        
+        var c = tr.firstChild.innerHTML;
+        tr["data-toggle"] = "tooltip";
+        tr["data-placement"] = "top";  
+        var des = getDescription(c);
+        tr.title = c + ": " + des;
+        
+        table.appendChild(tr);
     }
 }
     
 function popSearch(){
-    clearSearchTable();
     clearSearchTable();
     document.getElementById("Search").style.display = "block";
     var searchArray = [];
@@ -510,7 +527,33 @@ function popSearch(){
         addSearchRows(trackClasses,track); 
     }
 }
+    
+function addClass(row){
+    if(storedClass==""){
+        for(var i=0; i<3; i++){
+            row.cells[i+1].innerHTML = "";
+        }
+    }
+    else{
+        var classInfo = getClassInfo(storedClass);
 
+        for(var i=0; i<3; i++){
+            row.cells[i+1].innerHTML = classInfo[i];
+        }
+        var des = getDescription(classInfo[0]);
+        row.title = classInfo[0] + ": " + des;
+        
+        storedClass ="";
+    }
+}  
+
+function clearSearchTable(){
+    var table = document.getElementById("searchbody");
+    while(table.firstChild){
+        table.removeChild(table.firstChild);
+    }
+}
+    
 function saveSchedule(){
     clearTables();
     var scheduleStr = JSON.stringify(schedule);
@@ -539,14 +582,38 @@ function clearTables(){
         }
         schedule[currentYear][qn] = classArray;
     }
-    console.log(schedule);
 }
-function clearSearchTable(){
-    var table = document.getElementById("searchbody");
-    while(table.firstChild){
-        table.removeChild(table.firstChild);
+    
+function reset(){
+    clearTables();
+    document.getElementById("Search").style.display = "none";
+    
+    document.getElementById("100level").checked = false;
+    document.getElementById("200level").checked = false;
+    document.getElementById("300level").checked = false;
+    document.getElementById("400level").checked = false;
+    
+    document.getElementById("ConcenSelect").value = "Track Selection";
+    
+    for(year in schedule){
+        for(quarter in schedule[year]){      
+            var coreClasses = [];
+            var qn = quarter.substr(quarter.length-1);
+            var cores = getCore(year,qn);
+            
+            for(i in cores){
+                coreClasses.push(cores[i][0]);
+            }
+            
+            schedule[year][quarter] = coreClasses;
+
+            if(year == currentYear){
+                populateCore(year,qn);
+            }
+        }
     }
 }
-  
+ 
+    
 </script>
 </html>
