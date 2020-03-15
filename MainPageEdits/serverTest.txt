@@ -1,0 +1,13 @@
+//Below is the text that I used in my server testing to make sure the post request was being recieved 
+
+var scheduleJSON = {};
+
+// Tell express to use JSON
+app.use(express.json());
+
+// Route that receives a POST request to /sms
+app.post('/schedule', function (req, res) {
+  scheduleJSON = req.body;
+  console.log(scheduleJSON);
+});
+
