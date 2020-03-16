@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>User Registration</title>
+      <link href="style.css" rel="stylesheet">
+      <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+   </head>
+
+   <body>
+   <div class="container">
+       <h1 style="text-align: center;">User Registration</h1>
+	   	   <% if(message.length > 0) { %>
+    <div class="alert alert-danger"><%= message %></div> 
+   <% } %>
+
+       
+    
+       <form action="/signup" method="post">
+	   <div class="imgcontainer">
+        <img src="Drexel_vertical_blue.png" alt="Avatar" class="avatar">
+    </div>
+	   <div class="form-group">
+	   <a href="/login"><button type="button" class="registerbtn" style="float: right; font-size: 12px; border-radius: 5px; padding: none;  align-content: center;"><strong>LOGIN Here!</strong></button></a>
+       <label for="Username"><strong>Full Name</strong></label>
+       <input type="text" class="form-control" name="username">  
+       <label for="password"><strong>Password</strong></label>
+       <input type="password" class="form-control" name="password">
+       </div>
+       
+       <button type="submit" class="btn btn-succcess btn-lg" style="border-radius: 10px;"><strong>Register</strong></button>    
+             
+       </form>
+       </div>
+	   </div>
+       </form>
+   </body>
+</html>

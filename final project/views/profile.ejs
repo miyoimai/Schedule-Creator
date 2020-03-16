@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CCI Schedule Interface</title>
+  <link rel="icon" type="image/png" href="Dragon_blue.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<style>'
+.scrollable {
+  height: 300px;
+  overflow: scroll;
+}
+
+* {
+  font-family: Nunito Sans;
+}
+
+.container-fluid {
+  visibility: collapse;
+}
+
+</style>
+<body onload="load()">
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-info-circle" style = "font-size: 25px; color: #07294D"></i></a>
+
+    <a href="/logout" class="btn btn-primary" style="text-align:right; margin-top: 10px; background-color: #07294D" onclick="saveSchedule()">Logout</a>
+  </nav>
+
+
+<div class="w3-animate-opacity" id="page-content">
+<div class="jumbotron text-center" style = "background-color: #07294D">
+  <img src = "Dragon_yellow.png" style="width:15%">
+  <h1 style="color: #FFC600">CCI Schedule Interface</h1>
+</div>
+
+<div class="container">
+<div class="row">
+    <div class="col-sm-6">
+      <h3>Schedule Year</h3>
+      <form>
+      <div class="form-group">
+        <label for="YearSelect">Year</label>
+        <select class="form-control" id="YearSelect">
+          <option>Freshman</option>
+          <option>Sophomore</option>
+          <option>Pre-Junior</option>
+          <option>Junior</option>
+          <option>Senior</option>
+        </select>
+      </div>
+          <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D; margin-right: 10px;" onclick="ChangeQuar()">Change Quarters</a>
+          <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D; margin-right: 10px;" onclick="popSearch()">Search</a>
+          <a class="btn btn-primary" href="#" role="button" style ="margin-top: 10px; background-color: #07294D; " onclick="reset()">Reset</a>
+    </form>
+    </div>
+    <div class="col-sm-6">
+      <h3>Search Preferences</h3>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="100level" value="option1">
+        <label class="form-check-label" for="100level" style="padding-left: 20px;">Level 100 classes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="200level" value="option2">
+        <label class="form-check-label" for="200level" style="padding-left: 20px;">Level 200 classes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="300level" value="option3">
+        <label class="form-check-label" for="300level" style="padding-left: 20px;">Level 300 classes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="400level" value="option4">
+        <label class="form-check-label" for="400level" style="padding-left: 20px;">Level 400 classes</label>
+      </div>
+      <div class="form-group" style="margin-top: 20px">
+        <label for="ConcenSelect">Track</label>
+        <select class="form-control" id="ConcenSelect">
+          <option>Track Selection</option>
+          <option>Algorithms and Data Structures</option>
+          <option>Artificial Intelligence</option>
+          <option>Computer and Network Security</option>
+          <option>Computer Architecture</option>
+          <option>Computer Graphics and Vision</option>
+          <option>Computing Systems</option>
+          <option>Game Development and Design</option>
+          <option>Human-Computer Interaction</option>
+          <option>Programming Languages</option>
+          <option>Software Engineering</option>
+          <option>Theory and Computation</option>
+        </select>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-6">
+      <h3>Classes Selected</h3>
+<div id="Q1">
+  <h4>Quarter 1</h4>
+<div class = "scrollable" id="Q1">
+  <table class="table table-bordered table-striped mb-0 col-sm-12" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Class Code</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Credits</th>
+      </tr>
+    </thead>
+    <tbody id="Q1body" style="cursor: pointer;">
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">4</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">6</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<div id="Q2" style= "display:none;">
+    <h4>Quarter 2</h4>
+<div class = "scrollable" id ="Q2">
+  <table class="table table-bordered table-striped mb-0" style="cursor: pointer;">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Class Code</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Credits</th>
+      </tr>
+    </thead>
+    <tbody id="Q2body" style="cursor: pointer;">
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">6</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<div id="Q3" style= "display:none;" >
+    <h4>Quarter 3</h4>
+<div class = "scrollable">
+  <table class="table table-bordered table-striped mb-0">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Class Code</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Credits</th>
+      </tr>
+    </thead>
+    <tbody id="Q3body" style="cursor: pointer;">
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">4</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr onclick="addClass(this)" data-toggle="tooltip" data-placement ="top" title="">
+        <th scope="row">6</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+</div>
+       
+<div class="col-sm-6">
+<div  id="Search" class = "scrollable" style="margin-top: 32px; margin-bottom: 20px; display: none; height:465px;">
+  <h3>Search Results</h3>
+  <table class="table table-bordered table-striped mb-0"> 
+    <thead>
+      <tr>
+        <th scope="col">Class Code</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Credits</th>
+      </tr>
+    </thead>
+    <tbody id="searchbody">
+  
+    </tbody>
+  </table>
+</div>    
+</div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Welcome to the site!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Welcome to the CCI Schedule Interface! This application will help you in making a schedule for any term and also helps selects classes depending on any preferences listed in the interface.
+        <br>
+        <br>
+        <hr id="footer">
+        <i class="material-icons">email</i>
+        mom34@drexel.edu, enc44@drexel.edu, 
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<script type='text/javascript'>
+
+var schedule = <%- user.schedules %>
+
+</script>
+
+<script src="./courseDatabase.js"></script>
+
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+var currentYear = "freshman";
+var storedClass = "";
+
+function load() {
+
+    document.getElementById("Q1").style.display = "block";
+    document.getElementById("Q2").style.display = "block";
+    document.getElementById("Q3").style.display = "block";
+
+    populateCore("freshman", 1);
+    populateCore("freshman", 2);
+    populateCore("freshman", 3);
+}
+
+function ChangeQuar() {
+    if (document.getElementById("YearSelect").value == "Freshman") {
+        clearTables();
+
+        document.getElementById("Q1").style.display = "block";
+        document.getElementById("Q2").style.display = "block";
+        document.getElementById("Q3").style.display = "block";
+
+
+        populateCore("freshman", 1);
+        populateCore("freshman", 2);
+        populateCore("freshman", 3);
+
+        currentYear = "freshman";
+    }
+    if (document.getElementById("YearSelect").value == "Sophomore") {
+        clearTables();
+
+        document.getElementById("Q1").style.display = "block";
+        document.getElementById("Q2").style.display = "block";
+        document.getElementById("Q3").style.display = "none";
+
+        populateCore("sophomore", 1);
+        populateCore("sophomore", 2);
+
+        currentYear = "sophomore";
+    }
+    if (document.getElementById("YearSelect").value == "Junior") {
+        clearTables();
+
+        document.getElementById("Q1").style.display = "block";
+        document.getElementById("Q2").style.display = "block";
+        document.getElementById("Q3").style.display = "none";
+
+        populateCore("junior", 1);
+
+        currentYear = "junior";
+    }
+    if (document.getElementById("YearSelect").value == "Pre-Junior") {
+        clearTables();
+
+        document.getElementById("Q1").style.display = "block";
+        document.getElementById("Q2").style.display = "block";
+        document.getElementById("Q3").style.display = "none";
+
+        populateCore("pre-junior", 1);
+        populateCore("pre-junior", 2);
+
+        currentYear = "pre-junior";
+    }
+    if (document.getElementById("YearSelect").value == "Senior") {
+        clearTables();
+
+        document.getElementById("Q1").style.display = "block";
+        document.getElementById("Q2").style.display = "block";
+        document.getElementById("Q3").style.display = "block";
+
+        populateCore("senior", 1);
+        populateCore("senior", 2);
+        populateCore("senior", 3);
+
+        currentYear = "senior"
+    }
+
+}
+
+function populateCore(year, qn) {
+    var Qid = "Q" + qn + "body";
+    var table = document.getElementById(Qid);
+    var classes = getSchedule(year, qn);
+
+    for (var r in classes) {
+        for (var c = 0; c < 3; c++) {
+            table.rows[r].cells[c + 1].innerHTML = classes[r][c];
+        }
+        var des = getDescription(classes[r][0])
+        table.rows[r].title = classes[r][0] + ": " + des;
+    }
+}
+
+function getSchedule(year, quarter) {
+    var q = "quarter" + quarter;
+    var y = schedule[year];
+    var classList = y[q];
+    var classArray = [];
+
+    for (var i in classList) {
+        var c = getClassInfo(classList[i]);
+        classArray.push(c);
+    }
+
+    return classArray;
+}
+
+function addSearchRows(classes, searchName) {
+    var table = document.getElementById("searchbody");
+
+    var tr = document.createElement("tr");
+    var th = document.createElement("th");
+    th.colSpan = "3";
+    th.innerHTML = searchName;
+    tr.appendChild(th);
+    table.appendChild(tr);
+
+    for (r in classes) {
+        var tr = document.createElement("tr");
+        var pick = false;
+        for (var c = 0; c < 3; c++) {
+            if (c == 0 && classes[r][c] == "options") {
+                var tr = document.createElement("tr");
+                var th = document.createElement("th");
+                th.colSpan = "3";
+                th.innerHTML = "Pick " + classes[r][1] + " from below:";
+                tr.appendChild(th);
+
+                var options = classes[r][2];
+                c = 3;
+                pick = true;
+            }
+            else {
+                var td = document.createElement("td");
+
+                td.innerHTML = classes[r][c];
+                tr.appendChild(td);
+            }
+        }
+        if (pick != true) {
+            tr.style.cursor = "pointer";
+            tr.addEventListener("click", function () {
+                storedClass = this.firstChild.innerHTML;
+            });
+            var c = tr.firstChild.innerHTML;
+
+            tr["data-toggle"] = "tooltip";
+            tr["data-placement"] = "top";
+
+            var des = getDescription(c);
+            tr.title = c + ": " + des;
+        }
+        //            tr.addEventListener("click",function{
+        //                tr.style.color = "white";        
+        //            });
+        table.appendChild(tr);
+    }
+
+    for (i in options) {
+        var tr = document.createElement("tr");
+        for (var k = 0; k < 3; k++) {
+            var td = document.createElement("td");
+            td.innerHTML = options[i][k];
+            tr.appendChild(td);
+        }
+        tr.style.cursor = "pointer";
+        tr.addEventListener("click", function () {
+            storedClass = this.firstChild.innerHTML;
+        });
+
+        var c = tr.firstChild.innerHTML;
+        tr["data-toggle"] = "tooltip";
+        tr["data-placement"] = "top";
+        var des = getDescription(c);
+        tr.title = c + ": " + des;
+
+        table.appendChild(tr);
+    }
+}
+
+function popSearch() {
+    clearSearchTable();
+    document.getElementById("Search").style.display = "block";
+    var searchArray = [];
+
+    if (document.getElementById("100level").checked) {
+        addSearchRows(get100s(), "100 level classes");
+    }
+    if (document.getElementById("200level").checked) {
+        addSearchRows(get200s(), "200 level classes");
+    }
+    if (document.getElementById("300level").checked) {
+        addSearchRows(get300s(), "300 level classes");
+    }
+    if (document.getElementById("400level").checked) {
+        addSearchRows(get400s(), "400 level classes");
+    }
+    var track = document.getElementById("ConcenSelect").value;
+    if (track != "Track Selection") {
+        var trackClasses = getTrack(track);
+        addSearchRows(trackClasses, track);
+    }
+}
+
+function addClass(row) {
+    if (storedClass == "") {
+        for (var i = 0; i < 3; i++) {
+            row.cells[i + 1].innerHTML = "";
+        }
+    }
+    else {
+        var classInfo = getClassInfo(storedClass);
+
+        for (var i = 0; i < 3; i++) {
+            row.cells[i + 1].innerHTML = classInfo[i];
+        }
+        var des = getDescription(classInfo[0]);
+        row.title = classInfo[0] + ": " + des;
+
+        storedClass = "";
+    }
+}
+
+function clearSearchTable() {
+    var table = document.getElementById("searchbody");
+    while (table.firstChild) {
+        table.removeChild(table.firstChild);
+    }
+}
+
+function saveSchedule() {
+    clearTables();
+    var scheduleStr = JSON.stringify(schedule);
+    let req = new XMLHttpRequest();
+    req.open("POST", "/schedule", true);
+    req.setRequestHeader('Content-Type', 'application/json');
+    req.send(scheduleStr);
+}
+
+function clearTables() {
+    for (t = 1; t <= 3; t++) {
+        var classArray = [];
+        var Qid = "Q" + t + "body";
+        var qn = "quarter" + t;
+        for (r = 0; r < 6; r++) {
+            //var Qid = "Q" + t +"body";
+            var table = document.getElementById(Qid);
+            var className = table.rows[r].cells[1].innerHTML
+            if (className != "") {
+                classArray.push(className);
+            }
+            table.rows[r].cells[1].innerHTML = "";
+            table.rows[r].cells[2].innerHTML = "";
+            table.rows[r].cells[3].innerHTML = "";
+        }
+        schedule[currentYear][qn] = classArray;
+    }
+}
+
+function reset() {
+    clearTables();
+    document.getElementById("Search").style.display = "none";
+
+    document.getElementById("100level").checked = false;
+    document.getElementById("200level").checked = false;
+    document.getElementById("300level").checked = false;
+    document.getElementById("400level").checked = false;
+
+    document.getElementById("ConcenSelect").value = "Track Selection";
+
+    for (year in schedule) {
+        for (quarter in schedule[year]) {
+            var coreClasses = [];
+            var qn = quarter.substr(quarter.length - 1);
+            var cores = getCore(year, qn);
+
+            for (i in cores) {
+                coreClasses.push(cores[i][0]);
+            }
+
+            schedule[year][quarter] = coreClasses;
+
+            if (year == currentYear) {
+                populateCore(year, qn);
+            }
+        }
+    }
+}
+</script>
+</html>
